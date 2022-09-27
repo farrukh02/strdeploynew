@@ -4,7 +4,7 @@
 # - get prediction            #  
 ###############################
 import pickle
-from turtle import st
+#from turtle import st
 
 import pandas as pd
 import streamlit as st
