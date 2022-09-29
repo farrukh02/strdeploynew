@@ -233,6 +233,17 @@ if st.button("Get Your Prediction"):
                           })
     # Making predictions            
     #prediction = loaded_model.predict(X)[:, 1]  # The model produces (p0,p1), we want p1.
-    predictions = loaded_model.predict(X)
+    #predictions = loaded_model.predict(X)
+    def predictions(X):
+        import operator
+        res = loaded_model.predict_proba(X).flatten().tolist()
+        res = [i*100 for i in res]
+        prof = ["business","creative","office","outdoors","people_contact","practical","scientific"]
+        d = dict(zip(prof,res))
+        sorted_dict = sorted(d.items(),key = operator.itemgetter(1),reverse=True)
+        return sorted_dict
+    predictions_02 = predictions(X)
 
-    st.success('Your Target is {}'.format(predictions))
+    st.success('Your Target is {}'.format(predictions_02))
+
+    #st.success('Your Target is {}'.format(predictions))
