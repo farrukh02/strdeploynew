@@ -1,8 +1,4 @@
-###############################
-# This program lets you       #
-# - enter values in Streamlit #
-# - get prediction            #  
-###############################
+
 import pickle
 #from turtle import st
 
@@ -19,22 +15,8 @@ loaded_model = pickle.load(open(modelname, 'rb'))
 #############                
 st.write("The model prediction")
 
-# LIVINGAPARTMENTS_AVG_MIN = 0.0
-# LIVINGAPARTMENTS_AVG_MAX = 1.0
-# APARTMENTS_AVG_MIN = 0.0
-# APARTMENTS_AVG_MAX = 0.11697126743049956
 
-# Get input values - numeric variables
-# LIVINGAPARTMENTS_AVG = st.slider('Please enter the living apartments:',
-#                                 min_value=LIVINGAPARTMENTS_AVG_MIN,
-#                                 max_value=LIVINGAPARTMENTS_AVG_MAX
-#                                 )
-# APARTMENTS_AVG = st.slider('Please enter the apartment average:',
-#                           min_value=APARTMENTS_AVG_MIN,
-#                         max_value=APARTMENTS_AVG_MAX
-#                           )
 
-# Set dummy variables to zero    
 cat_list = ['nom_q_9103b', 'nom_q_9103c', 'nom_q_9103d', 'nom_q_9103e',
             'nom_q_9103f', 'nom_q_9103g', 'nom_q_9103h', 'nom_q_9103i',
             'nom_q_9103j', 'nom_q_9103k', 'nom_q_9103l', 'nom_q_9103m',
